@@ -48,7 +48,7 @@ class PersonControllerApi
     }
 
     /**
-     * @Route("/add", name="personapi_add", methods={"POST"})
+     * @Route("/add", name="personapi_add", methods={"GET","POST"})
      */
     public function addPerson(Request $request): JsonResponse
     {
@@ -64,7 +64,7 @@ class PersonControllerApi
             throw new NotFoundHttpException('Expecting mandatory parameters!');
         }
 
-        $this->personRepository->savePerson($fio,  $email, $phone,$remark);
+        $this->personRepository->savePerson($fio,  $email, $phone, $remark);
 
         return new JsonResponse(['status' => 'Person added!'], Response::HTTP_CREATED);
     }

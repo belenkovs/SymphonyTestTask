@@ -35,7 +35,7 @@ git add .
 git diff config/bundles.php
 18. установка профилировщика для dev
 composer require profiler --dev
-19. установить установщики  контролера и прочие 
+19. установить установщики  контролера и прочие для разработки
 composer require symfony/maker-bundle --dev
 20. проверить установщики наличие
 php bin/console list make
@@ -47,3 +47,32 @@ php bin/console server:dump
 Смотреть  логи  в \var\log\
 23. установщик профалера
  composer require profiler --dev
+24. подлючится к Бд исправить файл .env , локальная бд без пароля , чтоб были доступны субд. необходимо подлючить в
+php модули БД.
+.env
+DATABASE_URL=mysql://root@127.0.0.1:3306/stesttask  выбрал новую БД несуществующую, для создания.
+25.  добавить orm pack для БД
+composer require symfony/orm-pack
+26. создать БД.
+php bin/console doctrine:database:create
+
+27. создание сущности
+для пример возмём
+persons (fio,phone,email,remrk)
+
+php bin/console make:entity
+28. создать файл для миграции
+php bin/console make:migration
+29. перенести в БД mssql , проверить БД в MSSQL
+
+php bin/console doctrine:migrations:migrate
+
+
+30. провреить созаданный класс 
+
+31. создасть тестовый пример, утсновить fixtures
+	composer require --dev orm-fixtures
+32. исправить файл AppFixtures добавить заполенение
+33. запустить загрузку.
+php bin/console doctrine:fixtures:load
+

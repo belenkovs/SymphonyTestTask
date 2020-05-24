@@ -1,7 +1,7 @@
-0  хорошие уроки на  https://symfonycasts.com   https://symfonycasts.com/screencast/symfony/console#play
+0 хорошие уроки на https://symfonycasts.com   https://symfonycasts.com/screencast/symfony/console#play
 1. Создание проекта
 symfony new SymphonyTestTask
-2. переейти в созданную папку  SymphonyTestTask
+2. перейти в созданную папку  SymphonyTestTask
 3. Проверить git
 git status
 4. добавить файлы git add .
@@ -11,19 +11,19 @@ git show --name-only
 symfony check:req
 7. запустить сервер
 symfony server:start
-8. Проверить сайт , после запуска сервера в консоле будет укзазан порт куда нужно подключатся.
+8. Проверить сайт, после запуска сервера в консоли будет указан порт куда нужно подключатся.
 http://localhost:8000/
-9 установить анатотацию чтоб можно было роуты прописывать непосредсвеннов к мопнентах 
+9 установить аннотацию чтоб можно было роуты прописывать непосредственно к комментариях 
 composer require annotations
-10. добавить новые файлы которые проявились в гит и закомтитить
+10. добавить новые файлы которые проявились в гит и закомитить
 git add .
 11.
 git commit -m "Sympony commit"
-12. посмотреть какие модули установлены в симпофонии
+12. посмотреть какие модули установлены в симфонии
 php bin/console
 13. проверить какие маршруты существуют
 php bin/console debug:router
-14. установиьт пакет безопаной проверки
+14. установить пакет безопасной проверки
 composer require sec-checker                                                                                                                                          
 15 проверка безопасности пакетов
 php bin/console security:check
@@ -35,7 +35,7 @@ git add .
 git diff config/bundles.php
 18. установка профилировщика для dev
 composer require profiler --dev
-19. установить установщики  контролера и прочие для разработки
+19. установить установщики контролера и прочие для разработки
 composer require symfony/maker-bundle --dev
 20. проверить установщики наличие
 php bin/console list make
@@ -47,8 +47,7 @@ php bin/console server:dump
 Смотреть  логи  в \var\log\
 23. установщик профалера
  composer require profiler --dev
-24. подлючится к Бд исправить файл .env , локальная бд без пароля , чтоб были доступны субд. необходимо подлючить в
-php модули БД.
+24. подключится к Бд исправить файл .env , локальная бд без пароля , чтоб были доступны субд. необходимо подлечить в php.ini модули БД.
 .env
 DATABASE_URL=mysql://root@127.0.0.1:3306/stesttask  выбрал новую БД несуществующую, для создания.
 25.  добавить orm pack для БД
@@ -57,20 +56,16 @@ composer require symfony/orm-pack
 php bin/console doctrine:database:create
 
 27. создание сущности
-для пример возмём
-persons (fio,phone,email,remrk)
-
+для примера возьмём
+persons (fio,email,phone,remark)
 php bin/console make:entity
 28. создать файл для миграции
 php bin/console make:migration
 29. перенести в БД mssql , проверить БД в MSSQL
-
 php bin/console doctrine:migrations:migrate
 
-
-30. провреить созаданный класс 
-
-31. создасть тестовый пример, утсновить fixtures
+30. проверить созданный класс 
+31. создать тестовый пример, установить fixtures
 	composer require --dev orm-fixtures
 32. исправить файл AppFixtures добавить заполенение
 33. запустить загрузку.
@@ -89,4 +84,6 @@ composer require form validator security-csrf
  created: templates/person/index.html.twig
  created: templates/person/new.html.twig
  created: templates/person/show.html.twig
+
+36. создать файл api PersonControllerApi.php
 

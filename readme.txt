@@ -24,8 +24,17 @@ php bin/console
 13. проверить какие маршруты существуют
 php bin/console debug:router
 14. установиьт пакет безопаной проверки
-composer require sec-checker
+composer require sec-checker                                                                                                                                          
 15 проверка безопасности пакетов
 php bin/console security:check
 16. установка модуля темлейтов
 composer require template
+17 убрать из git bundles.php
+git status
+git add .
+git diff config/bundles.php
+18. установка профилировщика для dev
+composer require profiler --dev
+19. установить установщики  контролера и прочие 
+composer require symfony/maker-bundle --dev
+20. проверить установщики наличие

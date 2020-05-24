@@ -78,6 +78,7 @@
     "conflict": {
         "symfony/symfony": "*"
     },
+    "minimum-stability": "dev",
     "extra": {
         "symfony": {
             "allow-contrib": false,

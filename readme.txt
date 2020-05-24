@@ -75,4 +75,18 @@ php bin/console doctrine:migrations:migrate
 32. исправить файл AppFixtures добавить заполенение
 33. запустить загрузку.
 php bin/console doctrine:fixtures:load
+34.  Установить для crud
+composer require form validator security-csrf
+35. создать 
+	php bin/console make:crud
+для сущности Person
+> Person
+ created: src/Controller/PersonController.php
+ created: src/Form/PersonType.php
+ created: templates/person/_delete_form.html.twig
+ created: templates/person/_form.html.twig
+ created: templates/person/edit.html.twig
+ created: templates/person/index.html.twig
+ created: templates/person/new.html.twig
+ created: templates/person/show.html.twig
 

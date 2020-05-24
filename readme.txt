@@ -87,3 +87,18 @@ composer require form validator security-csrf
 
 36. создать файл api PersonControllerApi.php
 
+37. тестирование (пока иду в обратном порядке сначало код потом тестирование.)
+38. устанавливаем модуль тестирования
+	composer require phpunit
+  * Write test cases in the tests/ folder
+  * Run php bin/phpunit
+
+39. разрабатываем тесты, по тому что уже написано.
+40. для примера можно взять php bin/console debug:router и отобрать маршруты по типам и протестировать.
+	проверить на существование методов.
+	проверить на существование сущностей.
+	проверить на результат выполнения методов.
+
+
+41. подлючение к composer
+

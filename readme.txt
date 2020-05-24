@@ -15,3 +15,17 @@ symfony server:start
 http://localhost:8000/
 9 установить анатотацию чтоб можно было роуты прописывать непосредсвеннов к мопнентах 
 composer require annotations
+10. добавить новые файлы которые проявились в гит и закомтитить
+git add .
+11.
+git commit -m "Sympony commit"
+12. посмотреть какие модули установлены в симпофонии
+php bin/console
+13. проверить какие маршруты существуют
+php bin/console debug:router
+14. установиьт пакет безопаной проверки
+composer require sec-checker
+15 проверка безопасности пакетов
+php bin/console security:check
+16. установка модуля темлейтов
+composer require template

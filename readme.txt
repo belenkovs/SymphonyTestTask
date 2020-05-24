@@ -38,3 +38,11 @@ composer require profiler --dev
 19. установить установщики  контролера и прочие 
 composer require symfony/maker-bundle --dev
 20. проверить установщики наличие
+php bin/console list make
+21. создание контроллера
+php bin/console make:controller
+22. запуск и установка в режиме дебага, но что то не сработало. посмотрю позже 
+composer require debug
+php bin/console server:dump
+Смотреть  логи  в \var\log\
+23. 

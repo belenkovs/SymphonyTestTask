@@ -23,7 +23,7 @@ class QuestionController extends AbstractController
      */	
     public function show($slug)
     {
-//        dump($slug, $this);
+        dump($slug, $this);
 	return new Response('Go Go Go '.$slug);
     }
 

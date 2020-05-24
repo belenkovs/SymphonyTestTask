@@ -45,4 +45,5 @@ php bin/console make:controller
 composer require debug
 php bin/console server:dump
 Смотреть  логи  в \var\log\
-23. 
+23. установщик профалера
+ composer require profiler --dev

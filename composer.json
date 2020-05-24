@@ -1,8 +1,15 @@
 {
     "name": "belenkovs/symphonytesttask",
-    "description": "SymphonyTestTask TestTask",
+    "description": "Test TASK Symphony module CRUD and REST API 2020/05/21",
+    "keywords": ["symphony","crud","RESTAPI"],
     "type": "project",
     "license": "proprietary",
+     "authors": [
+      {
+        "name" : "Belenko V.S.",
+        "email" : "val@usva.biz"
+      }
+    ],
     "require": {
         "php": "^7.2.5",
         "ext-ctype": "*",

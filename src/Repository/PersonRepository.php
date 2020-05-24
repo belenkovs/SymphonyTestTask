@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Person;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\EntityManagerInterface;
 
 /**
  * @method Person|null find($id, $lockMode = null, $lockVersion = null)
@@ -14,10 +15,70 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class PersonRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
+
+private $manager;
+/*    
+
+
+    public function __construct
+    (
+        ManagerRegistry $registry,
+        EntityManagerInterface $manager
+    )
     {
         parent::__construct($registry, Person::class);
+        $this->manager = $manager;
     }
+
+
+
+    public function __construct(
+				 ManagerRegistry $registry,
+			         EntityManagerInterface $manager
+				)
+    {
+        parent::__construct($registry, Peroson::class);
+        $this->manager = $manager;
+    }
+*/
+
+    public function __construct(ManagerRegistry $registry,EntityManagerInterface $manager)
+    {
+        parent::__construct($registry, Person::class);
+        $this->manager = $manager;
+    }
+
+
+    public function savePerson($fio, $email, $phone, $remark)
+    {
+        $newPerson = new Person();
+
+        $newPerson
+            ->setFio($fio)
+            ->setEmail($email)
+            ->setPhone($phone)
+            ->setRemark($remark);
+
+        $this->manager->persist($newPerson);
+        $this->manager->flush();
+    }
+
+    public function updatePerson(Person $person, $data)
+    {
+        empty($data['fio']) ? true : $customer->setFirstName($data['fio']);
+        empty($data['email']) ? true : $customer->setEmail($data['email']);
+        empty($data['phone']) ? true : $customer->setPhoneNumber($data['phone']);
+        empty($data['remark']) ? true : $customer->setLastName($data['remark']);
+
+        $this->manager->flush();
+    }
+
+    public function removePerson(Person $person)
+    {
+        $this->manager->remove($person);
+        $this->manager->flush();
+    }
+
 
     // /**
     //  * @return Person[] Returns an array of Person objects

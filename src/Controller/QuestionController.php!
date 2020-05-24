@@ -1,0 +1,23 @@
+<?
+namespace App\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+# extends AbstractController
+class QuestionController
+{
+    public function homepage()
+	{
+	return new Response('Go Go Go ');
+	}
+	
+    /**
+     * @Route("/questions/{slug}")
+     */	
+    public function show($slug)
+    {
+//        dump($slug, $this);
+    }
+}
+
+?>

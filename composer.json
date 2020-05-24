@@ -83,9 +83,6 @@
         "symfony": {
             "allow-contrib": false,
             "require": "5.0.*"
-        },
-        "branch-alias": {
-            "dev-master": "1.0.0-dev"
         }
     }
 }
